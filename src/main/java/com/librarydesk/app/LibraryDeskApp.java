@@ -44,8 +44,12 @@ public class LibraryDeskApp {
         showBanner();
         boolean running = true;
         while (running) {
-            System.out.println(Ansi.colorize("\nMain Menu", Ansi.CYAN));
-            System.out.println("1) Books 2) Members 3) Loans 4) Reports 0) Exit");
+            System.out.println(Ansi.colorize("\nMain Menu", Ansi.WHITE, Ansi.BG_BLUE));
+            System.out.println(Ansi.colorize("1) Books", Ansi.CYAN));
+            System.out.println(Ansi.colorize("2) Members", Ansi.CYAN));
+            System.out.println(Ansi.colorize("3) Loans", Ansi.CYAN));
+            System.out.println(Ansi.colorize("4) Reports", Ansi.CYAN));
+            System.out.println(Ansi.colorize("0) Exit", Ansi.CYAN));
             int choice = ConsoleIO.readInt("Choose: ");
             switch (choice) {
                 case 1 -> booksMenu();
@@ -61,15 +65,19 @@ public class LibraryDeskApp {
 
     private void showBanner() {
         String banner = "*** LibraryDesk ***";
-        System.out.println(Ansi.colorize(banner, Ansi.CYAN));
+        System.out.println(Ansi.colorize(banner, Ansi.BLACK, Ansi.BG_CYAN));
     }
 
     // Books submenu
     private void booksMenu() {
         boolean back = false;
         while (!back) {
-            System.out.println(Ansi.colorize("\nBooks", Ansi.CYAN));
-            System.out.println("1) Add 2) List 3) Search 4) Remove 0) Back");
+            System.out.println(Ansi.colorize("\nBooks", Ansi.WHITE, Ansi.BG_BLUE));
+            System.out.println(Ansi.colorize("1) Add", Ansi.CYAN));
+            System.out.println(Ansi.colorize("2) List", Ansi.CYAN));
+            System.out.println(Ansi.colorize("3) Search", Ansi.CYAN));
+            System.out.println(Ansi.colorize("4) Remove", Ansi.CYAN));
+            System.out.println(Ansi.colorize("0) Back", Ansi.CYAN));
             int ch = ConsoleIO.readInt("Choose: ");
             try {
                 switch (ch) {
@@ -134,8 +142,11 @@ public class LibraryDeskApp {
     private void membersMenu() {
         boolean back = false;
         while (!back) {
-            System.out.println(Ansi.colorize("\nMembers", Ansi.CYAN));
-            System.out.println("1) Register 2) List 3) Search 0) Back");
+            System.out.println(Ansi.colorize("\nMembers", Ansi.WHITE, Ansi.BG_BLUE));
+            System.out.println(Ansi.colorize("1) Register", Ansi.CYAN));
+            System.out.println(Ansi.colorize("2) List", Ansi.CYAN));
+            System.out.println(Ansi.colorize("3) Search", Ansi.CYAN));
+            System.out.println(Ansi.colorize("0) Back", Ansi.CYAN));
             int ch = ConsoleIO.readInt("Choose: ");
             switch (ch) {
                 case 1 -> registerMember();
@@ -178,8 +189,12 @@ public class LibraryDeskApp {
     private void loansMenu() {
         boolean back = false;
         while (!back) {
-            System.out.println(Ansi.colorize("\nLoans", Ansi.CYAN));
-            System.out.println("1) Borrow 2) Return 3) List Active 4) List Overdue 0) Back");
+            System.out.println(Ansi.colorize("\nLoans", Ansi.WHITE, Ansi.BG_BLUE));
+            System.out.println(Ansi.colorize("1) Borrow", Ansi.CYAN));
+            System.out.println(Ansi.colorize("2) Return", Ansi.CYAN));
+            System.out.println(Ansi.colorize("3) List Active", Ansi.CYAN));
+            System.out.println(Ansi.colorize("4) List Overdue", Ansi.CYAN));
+            System.out.println(Ansi.colorize("0) Back", Ansi.CYAN));
             int ch = ConsoleIO.readInt("Choose: ");
             switch (ch) {
                 case 1 -> borrowFlow();
@@ -288,8 +303,10 @@ public class LibraryDeskApp {
     private void reportsMenu() {
         boolean back = false;
         while (!back) {
-            System.out.println(Ansi.colorize("\nReports", Ansi.CYAN));
-            System.out.println("1) Inventory summary 2) Top 5 books 0) Back");
+            System.out.println(Ansi.colorize("\nReports", Ansi.WHITE, Ansi.BG_BLUE));
+            System.out.println(Ansi.colorize("1) Inventory summary", Ansi.CYAN));
+            System.out.println(Ansi.colorize("2) Top 5 books", Ansi.CYAN));
+            System.out.println(Ansi.colorize("0) Back", Ansi.CYAN));
             int ch = ConsoleIO.readInt("Choose: ");
             switch (ch) {
                 case 1 -> inventoryReport();
